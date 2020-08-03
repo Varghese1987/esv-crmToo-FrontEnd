@@ -8,6 +8,18 @@ import { UserManageComponent } from './user-manage/user-manage.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { AuthGuard } from './auth.guard';
+import { ContactManageComponent } from './contact-manage/contact-manage.component';
+import { CreateContactComponent } from './create-contact/create-contact.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { UpdateContactComponent } from './update-contact/update-contact.component';
+import { SrManageComponent } from './sr-manage/sr-manage.component';
+import { SrListComponent } from './sr-list/sr-list.component';
+import { CreateSrComponent } from './create-sr/create-sr.component';
+import { UpdateSrStatusComponent } from './update-sr-status/update-sr-status.component';
+import { LeadManageComponent } from './lead-manage/lead-manage.component';
+import { LeadListComponent } from './lead-list/lead-list.component';
+import { CreateLeadComponent } from './create-lead/create-lead.component';
+import { UpdateLeadComponent } from './update-lead/update-lead.component';
 
 
 const routes: Routes = [
@@ -39,6 +51,60 @@ const routes: Routes = [
           {
             path:"editUser/:id",
             component:EditUserComponent
+          }
+        ]
+      },
+      {
+        path:"contactManage",
+        component:ContactManageComponent,
+        children:[
+          {
+            path:"",
+            component:ContactListComponent
+          },
+          {
+            path:"createContact",
+            component:CreateContactComponent
+          },
+          {
+            path:"editContact/:id",
+            component:UpdateContactComponent
+          }
+        ]
+      },
+      {
+        path:"srManage",
+        component:SrManageComponent,
+        children:[
+          {
+            path:"",
+            component:SrListComponent
+          },
+          {
+            path:"createSr",
+            component:CreateSrComponent
+          },
+          {
+            path:"editSr/:id",
+            component:UpdateSrStatusComponent
+          }
+        ]
+      },
+      {
+        path:"leadManage",
+        component:LeadManageComponent,
+        children:[
+          {
+            path:"",
+            component:LeadListComponent
+          },
+          {
+            path:"createLead",
+            component:CreateLeadComponent
+          },
+          {
+            path:"editLead/:id",
+            component:UpdateLeadComponent
           }
         ]
       }

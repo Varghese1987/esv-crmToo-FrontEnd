@@ -30,6 +30,9 @@ import { UpdateLeadComponent } from './update-lead/update-lead.component';
 import { SrListComponent } from './sr-list/sr-list.component';
 import { LeadListComponent } from './lead-list/lead-list.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
+import { ContactManageComponent } from './contact-manage/contact-manage.component';
+import { LeadManageComponent } from './lead-manage/lead-manage.component';
+import { SrManageComponent } from './sr-manage/sr-manage.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     UpdateLeadComponent,
     SrListComponent,
     LeadListComponent,
-    ContactListComponent
+    ContactListComponent,
+    ContactManageComponent,
+    LeadManageComponent,
+    SrManageComponent
   ],
   imports: [
     BrowserModule,

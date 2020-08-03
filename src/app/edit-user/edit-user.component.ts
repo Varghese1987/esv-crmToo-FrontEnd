@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class EditUserComponent implements OnInit {
 
   editUserForm: FormGroup;
-  role = ["Admin","Manager","Employee-Level-1","Employee-Level-2"];
+  role = ["Admin","Manager","Employee-Level-1","Employee-Level-2"]; 
   roleList;
   currentUserId;
   currentUserData;

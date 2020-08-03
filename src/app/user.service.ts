@@ -20,15 +20,21 @@ export class UserService {
   }
 
   editUser(userId,userDetail):Observable<any>{
-    return this.http.put(`${environment.apiUrl}/user/${userId}`,userDetail);
+    return this.http.put(`${environment.apiUrl}/user/${userId}`,userDetail,{
+      headers:{authorization:localStorage.getItem('authToken')}
+    });
   }
 
   deleteUser(userId):Observable<any>{
-    return this.http.delete(`${environment.apiUrl}/user/${userId}`);
+    return this.http.delete(`${environment.apiUrl}/user/${userId}`,{
+      headers:{authorization:localStorage.getItem('authToken')}
+    });
   }
 
   getUser():Observable<any>{
-    return this.http.get(`${environment.apiUrl}/userList`).pipe(
+    return this.http.get(`${environment.apiUrl}/userList`,{
+      headers:{authorization:localStorage.getItem('authToken')}
+    }).pipe(
       catchError(err=>{
         alert(err.error.message);
         return throwError(err);
@@ -45,7 +51,9 @@ export class UserService {
   }
 
   getUserById(userId):Observable<any>{
-    return this.http.get(`${environment.apiUrl}/user/${userId}`)
+    return this.http.get(`${environment.apiUrl}/user/${userId}`,{
+      headers:{authorization:localStorage.getItem('authToken')}
+    })
   }
 
 }

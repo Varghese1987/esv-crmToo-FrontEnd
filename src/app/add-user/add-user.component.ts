@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AddUserComponent implements OnInit {
   
   registerForm: FormGroup;
-  role = ["Admin","Manager","Employee-Level-1","Employee-Level-2"];
+  role = ["Admin","manager","employeeLevel-1","employeeLevel-2"];
   roleList;
 
   constructor(

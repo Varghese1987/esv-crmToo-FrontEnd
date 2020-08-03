@@ -1,1 +1,26 @@
-<p>sr-list works!</p>
+<div class="container pt-2">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">#id</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of srList | async">
+            <tr>
+                <td>{{data.srId}}</td>
+                <td>{{data.sub}}</td>
+                <td>{{data.description}}</td> 
+                <td>{{data.status}}</td>
+                <td>
+                    <button class="btn btn-primary" [routerLink]="['/home/srManage/editSr',data._id]">Update Status</button>
+                    <button class="btn btn-primary" (click)="deleteSr(data._id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

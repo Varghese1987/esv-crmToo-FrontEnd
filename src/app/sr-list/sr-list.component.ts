@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrmService } from '../crm.service';
 
 @Component({
   selector: 'app-sr-list',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SrListComponent implements OnInit {
 
-  constructor() { }
+  srList;
+
+  constructor(private crmService:CrmService) { }
 
   ngOnInit(): void {
+    this.srList=this.crmService.getSr();
+  }
+  deleteSr(id){
+    this.crmService.deleteSr(id).subscribe(response=>{
+      alert(response.message)
+    })
   }
 
 }
