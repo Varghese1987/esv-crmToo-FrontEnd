@@ -1,1 +1,77 @@
-<p>dash-board works!</p>
+<div class="card-deck">
+    <div class="card">
+        <h4 class="pt-1 pl-1">SR List</h4>
+        <div class="">
+            <div class="container-fluid pt-2">
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#id</th>
+                            <th scope="col">SR Subject</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let data of srList | async">
+                        <tr>
+                            <td>{{data.srId}}</td>
+                            <td>{{data.srSub}}</td>
+                            <td>{{data.srStatus}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="card">
+
+        <h4 class="pt-1 pl-1">Lead List</h4>
+        <div class="">
+
+            <div class="container-fluid pt-2">
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#id</th>
+                            <th scope="col">Lead Subject</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let data of leadList | async">
+                        <tr>
+                            <td>{{data.leadId}}</td>
+                            <td>{{data.leadSub}}</td>
+                            <td>{{data.leadStatus}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="card">
+
+        <h4 class="pt-1 pl-1">Contact List</h4>
+        <div class="">
+
+            <div class="container-fluid pt-2">
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">email</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let data of contactList | async">
+                        <tr>
+                            <td>{{data.contactId}}</td>
+                            <td>{{data.name}}</td>
+                            <td>{{data.email}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

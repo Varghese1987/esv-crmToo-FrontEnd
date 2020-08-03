@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashBoardComponent implements OnInit {
 
+  srList;
+  leadList;
+  contactList;
+
   constructor() { }
 
   ngOnInit(): void {
