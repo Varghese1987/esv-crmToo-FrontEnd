@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserService } from '../user.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CrmService } from '../crm.service';
@@ -24,7 +23,7 @@ export class CreateContactComponent implements OnInit {
       firstName:this.fb.control("",Validators.required),
       lastName:this.fb.control("",Validators.required),
       company:this.fb.control("",Validators.required),
-      Phone:this.fb.control("",Validators.required),
+      phone:this.fb.control("",Validators.required),
       email:this.fb.control("",[Validators.required,Validators.email])
     })
    }

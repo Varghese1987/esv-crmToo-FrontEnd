@@ -1,1 +1,52 @@
-<p>update-contact works!</p>
+<form [formGroup]="contactForm" (ngSubmit)="updateContact()">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <h1 class="h3 mb-3 font-weight-normal text-center">Update Contact information Form</h1>
+
+                <span style="color: red"
+                    *ngIf="!contactForm.get('firstName').valid && contactForm.get('firstName').dirty">*</span>
+                <input
+                    [ngClass]="{'error': !contactForm.get('firstName').valid && contactForm.get('firstName').dirty, 'correct': contactForm.get('firstName').valid}"
+                    formControlName="firstName" type="text" class="form-control" placeholder="First Name">
+            </div>
+            <div class="form-group">
+
+                <span style="color: red"
+                    *ngIf="!contactForm.get('lastName').valid && contactForm.get('lastName').dirty">*</span>
+                <input
+                    [ngClass]="{'error': !contactForm.get('lastName').valid && contactForm.get('lastName').dirty, 'correct': contactForm.get('lastName').valid}"
+                    formControlName="lastName" type="text" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+
+                <span style="color: red"
+                    *ngIf="!contactForm.get('company').valid && contactForm.get('company').dirty">*</span>
+                <input
+                    [ngClass]="{'error': !contactForm.get('company').valid && contactForm.get('company').dirty, 'correct': contactForm.get('company').valid}"
+                    formControlName="company" type="text" class="form-control" placeholder="Company Name">
+            </div>
+            <div class="form-group">
+
+                <span style="color: red"
+                    *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').dirty">*</span>
+                <input
+                    [ngClass]="{'error': !contactForm.get('phone').valid && contactForm.get('phone').dirty, 'correct': contactForm.get('phone').valid}"
+                    formControlName="phone" type="text" class="form-control" placeholder="Phone no">
+            </div>
+            <div class="form-group">
+
+                <span style="color: red"
+                    *ngIf="!contactForm.get('email').valid && contactForm.get('email').dirty">*</span>
+                <input
+                    [ngClass]="{'error': !contactForm.get('email').valid && contactForm.get('email').dirty, 'correct': contactForm.get('email').valid}"
+                    formControlName="email" type="email" class="form-control" placeholder="Email address">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <input type="submit" value="Create Contact" class="btn btn-primary" [disabled]="contactForm.invalid">
+        </div>
+    </div>
+</form>

@@ -81,26 +81,26 @@ export class CrmService {
     })
   }
 
-  addContact(userId,leadDetail):Observable<any>{
-    return this.http.post(`${environment.apiUrl}/createContact/${userId}`,leadDetail,{
+  addContact(userId,contactDetail):Observable<any>{
+    return this.http.post(`${environment.apiUrl}/createContact/${userId}`,contactDetail,{
       headers:{authorization:localStorage.getItem('authToken')}
     });
   }
 
-  editContact(leadId,leadDetail):Observable<any>{
-    return this.http.put(`${environment.apiUrl}/updateContact/${leadId}`,leadDetail,{
+  editContact(contactId,contactDetail):Observable<any>{
+    return this.http.put(`${environment.apiUrl}/updateContact/${contactId}`,contactDetail,{
       headers:{authorization:localStorage.getItem('authToken')}
     });
   }
 
-  deleteContact(leadId):Observable<any>{
-    return this.http.delete(`${environment.apiUrl}/contact/${leadId}`,{
+  deleteContact(contactId):Observable<any>{
+    return this.http.delete(`${environment.apiUrl}/contact/${contactId}`,{
       headers:{authorization:localStorage.getItem('authToken')}
     });
   }
 
   getContact():Observable<any>{
-    return this.http.get(`${environment.apiUrl}/leadList`,{
+    return this.http.get(`${environment.apiUrl}/contactList`,{
       headers:{authorization:localStorage.getItem('authToken')}
     }).pipe(
       catchError(err=>{
@@ -110,8 +110,8 @@ export class CrmService {
     )
   }
 
-  getContactById(leadId):Observable<any>{
-    return this.http.get(`${environment.apiUrl}/lead/${leadId}`,{
+  getContactById(contactId):Observable<any>{
+    return this.http.get(`${environment.apiUrl}/contact/${contactId}`,{
       headers:{authorization:localStorage.getItem('authToken')}
     })
   }
