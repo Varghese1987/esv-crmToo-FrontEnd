@@ -33,6 +33,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactManageComponent } from './contact-manage/contact-manage.component';
 import { LeadManageComponent } from './lead-manage/lead-manage.component';
 import { SrManageComponent } from './sr-manage/sr-manage.component';
+import { SendmailComponent } from './sendmail/sendmail.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { SrManageComponent } from './sr-manage/sr-manage.component';
     ContactListComponent,
     ContactManageComponent,
     LeadManageComponent,
-    SrManageComponent
+    SrManageComponent,
+    SendmailComponent
   ],
   imports: [
     BrowserModule,

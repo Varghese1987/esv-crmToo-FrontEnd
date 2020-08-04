@@ -115,4 +115,10 @@ export class CrmService {
       headers:{authorization:localStorage.getItem('authToken')}
     })
   }
+
+  getDashBoardData():Observable<any>{
+    return this.http.get(`${environment.apiUrl}/dashboard`,{
+      headers:{authorization:localStorage.getItem('authToken')}
+    })
+  }
 }

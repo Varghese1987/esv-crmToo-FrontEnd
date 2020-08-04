@@ -11,11 +11,11 @@
                             <th scope="col">Status</th>
                         </tr>
                     </thead>
-                    <tbody *ngFor="let data of srList | async">
+                    <tbody *ngFor="let data of srList">
                         <tr>
                             <td>{{data.srId}}</td>
-                            <td>{{data.srSub}}</td>
-                            <td>{{data.srStatus}}</td>
+                            <td>{{data.sub}}</td>
+                            <td>{{data.status}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -33,15 +33,15 @@
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">#id</th>
-                            <th scope="col">Lead Subject</th>
+                            <th scope="col">Lead Description</th>
                             <th scope="col">Status</th>
                         </tr>
                     </thead>
-                    <tbody *ngFor="let data of leadList | async">
+                    <tbody *ngFor="let data of leadList">
                         <tr>
                             <td>{{data.leadId}}</td>
-                            <td>{{data.leadSub}}</td>
-                            <td>{{data.leadStatus}}</td>
+                            <td>{{data.description}}</td>
+                            <td>{{data.status}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -63,10 +63,10 @@
                             <th scope="col">email</th>
                         </tr>
                     </thead>
-                    <tbody *ngFor="let data of contactList | async">
+                    <tbody *ngFor="let data of contactList">
                         <tr>
-                            <td>{{data.contactId}}</td>
-                            <td>{{data.name}}</td>
+                            <td>{{data.contId}}</td>
+                            <td>{{data.firstName}}</td>
                             <td>{{data.email}}</td>
                         </tr>
                     </tbody>

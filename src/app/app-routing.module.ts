@@ -20,12 +20,22 @@ import { LeadManageComponent } from './lead-manage/lead-manage.component';
 import { LeadListComponent } from './lead-list/lead-list.component';
 import { CreateLeadComponent } from './create-lead/create-lead.component';
 import { UpdateLeadComponent } from './update-lead/update-lead.component';
+import { SendmailComponent } from './sendmail/sendmail.component';
+import { ResetPwdComponent } from './reset-pwd/reset-pwd.component';
 
 
 const routes: Routes = [
   {
     path:"",
     component:LoginComponent
+  },
+  {
+    path:"sendmail",
+    component:SendmailComponent
+  },
+  {
+    path:"resetpwd/:string",
+    component:ResetPwdComponent
   },
   {
     path:"home",

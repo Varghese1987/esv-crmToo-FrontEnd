@@ -1,6 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     padding-top: 5rem;
+    background-image: linear-gradient(125deg,#cd84f1,#7efff5,#ffcccc,#BDC581,#D6A2E8);
+    background-size: 400%;
+    animation: bganimation 15s infinite;
+  }
+  @keyframes bganimation{
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,24 @@
+<div class="container center">
+
+    <form class="form-signin" [formGroup]="resetForm" (ngSubmit)="mailtriger()">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <h1 class="h3 mb-3 font-weight-normal text-center">Please Enter the email and submit</h1>
+                    <span style="color: red"
+                        *ngIf="!resetForm.get('email').valid && resetForm.get('email').dirty">*</span>
+                    <input
+                        [ngClass]="{'error': !resetForm.get('email').valid && resetForm.get('email').dirty, 'correct': resetForm.get('email').valid}"
+                        formControlName="email" type="email" class="form-control" placeholder="Email address">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <input type="submit" class="btn btn-primary" [disabled]="resetForm.invalid">
+            </div>
+        </div>
+        Already have an acoount? please click <a class="" routerLink="/">Login</a>
+    </form>
+</div>
